@@ -41,7 +41,7 @@ class Solver :
             print("Error : seed not defined")
 
         if self.method   == 'PiM':
-            sol, info, ram_issue = self.solveBnB(n_sel = 'breadth', s_sel = 'sfeas', fixx = True)
+            sol, info, ram_issue = self.solveBnB()
         elif self.method == 'miqp':
             sol, info, ram_issue = self.solveMiqp()
         elif self.method == 'complete_enum':
@@ -78,7 +78,13 @@ class Solver :
 
     ########################################################################################################
 
-    def solveBnB(self, empty = False, n_sel = None, s_sel = 'smax', fixx = False, lazy = True) :
+    def solveBnB(self, n_sel = 'breadth', s_sel = 'sfeas', fixx = True, lazy = True) :
+        # input parameters : 
+        # options for node selection (n_sel) are : 'breadth', 'depth' and None, which corresponds to selecting a random node
+        # options for scenario selection (s_sel) are : 'sfeas', 'smax' and None, which corresponds to selecting a random scenario
+        # fixing variables can be turned off by setting fixx = False
+        # no good-cuts (as lazy constraints) can be ignored by setting lazy = False
+
         # 0) importing the environment 
         env = copy.deepcopy(self.env)
         rng = self.rng

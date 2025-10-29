@@ -9,22 +9,7 @@
 
 Implementation of the PiM methdology proposed in 
 
-[De Santis, M., Donnini, F. & Kurtz, J., K-adaptability for two-stage stochastic optimization. arXiv pre-print (2025)](https://arxiv.org/abs/??)
-
-If you have used our code for research purposes, please cite the publication mentioned above.
-For the sake of simplicity, we provide the Bibtex format:
-
-```
-@misc{desantis2025KPiM,
-      title={$K$-adaptability for two-stage stochastic optimization}, 
-      author={Marianna De Santis and Federica Donnini and Jannis Kurtz},
-      year={2025},
-      eprint={??},
-      archivePrefix={arXiv},
-      primaryClass={math.OC},
-      url={https://arxiv.org/abs/??}, 
-}
-```
+[K-adaptability for two-stage stochastic optimization. (2025)]
 
 ### Main Dependencies Installation
 
@@ -43,25 +28,20 @@ pip install joblib
 
 ### Usage
 
-In files starting with "pf" instance specific functions can be found.
+- "kp_OR" stands for stochastic knapsack 
+- "tskp" stands for two-stage stochastic knapsack problem with setup. "tskp_OR" contains the original formulation of the problem, while in "tskp" additional constraints requiring a minimum capacity be filled are considered.
+- "qtskp" stands for quadratic two-stage stochastic knapsack problem with setup. Additional constraints of minimum capacity are considered.
+- "cfl" stands for two-stage stochastic capacitated facility location problem. "cfl_OR" contains the original formulation of the problem, while in "cfl" additional constraints requiring a minimum capacity be filled are considered.
+- "qcfl" stands for quadratic two-stage capacitated facility location problem. Additional constraints of minimum capacity are considered.
 
-Files ending with "_OR" refer to the original formulations of the corresponding problems, i.e. withouth the addition of a constraint requiring a minimum capacity be filled.
+Files starting with "pf" contain problem specific functions: the subpartition induced problem is defined for the corresponding underlying problem in the function ``` spip_build() ```.
 
 In ``` solver.py ``` implementations of PiM, CE and MIQP can be found.
 
-In ``` environment.py ``` the data for each instance is defined.
+In ``` environment.py ``` the data required for each class of problems is defined.
 
 Different values of $K$, $\ell$ or $n_x,n_y$ can be specified in the files starting with "main".
 
 Given a terminal (Anaconda Prompt for Windows users), an example of execution could be the following.
 
 ``` python main_tskp.py ```
-
-### Contact
-
-If you have any question, feel free to contact:
-
-[Federica Donnini](https://webgol.dinfo.unifi.it/federica-donnini/)<br>
-Global Optimization Laboratory ([GOL](https://webgol.dinfo.unifi.it/))<br>
-University of Florence<br>
-Email: federica dot donnini at unifi dot it
