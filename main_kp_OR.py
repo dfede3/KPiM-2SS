@@ -19,7 +19,7 @@ seed = 14
 
 print('Tests for kp:')
 
-for N in [10]:
+for N in [10]: # number of second stage variables (n_y)
     for l in [10, 15, 20]:
         
         # create the instances 

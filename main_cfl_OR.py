@@ -16,13 +16,13 @@ tmax = 30*60
 tol = 1e-5
 
 
-r = 5 # number of first stage variables
+r = 5 # number of first stage variables (n_x)
 
 seed = 14
 
 print('Tests for cfl OR:')
 
-for N in [10]:
+for N in [10]: # number of second stage variables (n_y)
     for l in [10, 15, 20] :
         
         # create the instances 
