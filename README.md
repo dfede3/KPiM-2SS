@@ -9,7 +9,6 @@ Implementation of the PiM methdology proposed in
 Federica Donnini, Marianna De Santis, and Jannis Kurtz. K-adaptability for two-stage stochastic optimization.
 Optimization online, 2025. URL https://optimization-online.org/?p=32681.
 
-
 ### Main Dependencies Installation
 
 In order to execute the code, you need an [Anaconda](https://www.anaconda.com/) environment with Python>=3.10.
@@ -44,3 +43,7 @@ Different values of $K$, $\ell$ or $n_x,n_y$ can be specified in the files start
 Given a terminal (Anaconda Prompt for Windows users), an example of execution could be the following.
 
 ``` python main_tskp.py ```
+
+## Formulations of the instances
+
+The complete formulations of the instances can be found in the file Formulations.pdf
