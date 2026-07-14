@@ -6,7 +6,9 @@
 
 Implementation of the PiM methdology proposed in 
 
-[K-adaptability for two-stage stochastic optimization. (2025)]
+Federica Donnini, Marianna De Santis, and Jannis Kurtz. K-adaptability for two-stage stochastic optimization.
+Optimization online, 2025. URL https://optimization-online.org/?p=32681.
+
 
 ### Main Dependencies Installation
 
